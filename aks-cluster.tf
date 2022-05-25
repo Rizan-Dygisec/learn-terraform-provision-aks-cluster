@@ -5,7 +5,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "default" {
   name     = "triton-azure-rg"
-  location = "East Asia"
+  location = "eastasia"
 
   tags = {
     environment = "Demo"
@@ -21,7 +21,7 @@ resource "azurerm_kubernetes_cluster" "default" {
   default_node_pool {
     name            = "default"
     node_count      = 2
-    vm_size         = "d16s_v4"
+    vm_size         = "Standard_D2s_v3"
     os_disk_size_gb = 30
   }
 
